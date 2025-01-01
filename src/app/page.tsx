@@ -1,101 +1,59 @@
-import Image from "next/image";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [response, setResponse] = useState<string | null>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    if (response) {
+      console.log(response);
+    }
+  }, [response]);
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen bg-black text-[#00E500] [text-shadow:_0_0_5px_rgb(0_229_0_/_50%),_0_0_15px_rgb(0_229_0_/_30%)] font-mono">
+      <div className="container mx-auto">
+        <div className="absolute top-4 text-2xl font-bold tracking-widest">
+          wDrones
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      {!response && (
+        <>
+          <div className="w-fit mb-8">
+            <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_1.5s_steps(25),blink_0.5s_step-end_infinite]">
+              Do you want a drone?
+            </h1>
+          </div>
+          <div className="flex flex-row items-center justify-center gap-4">
+            <Button variant="hacker" size="hacker" onClick={() => setResponse("Yes.")}>Yes.</Button>
+            <Button variant="hacker" size="hacker" onClick={() => setResponse("YES!")}>YES!</Button>
+          </div>
+        </>
+      )}
+      {response && (
+        <>
+          {response === "Yes." && (
+            <div className="w-fit">
+              <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_0.7s_steps(10),blink_0.5s_step-end_infinite]">
+                I got you!
+              </h1>
+            </div>
+          )}
+          {response === "YES!" && (
+            <div className="w-fit">
+              <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_1.2s_steps(20),blink_0.5s_step-end_infinite]">
+                {"Someone's excited :)"}
+              </h1>
+            </div>
+          )}
+          <Button className="mt-8" variant="hacker" size="hacker" onClick={() => window.open("whatsapp://send?phone=6139860904")}>
+            Text me!
+          </Button>
+        </>
+      )}
     </div>
   );
 }
+
