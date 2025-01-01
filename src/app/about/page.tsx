@@ -48,10 +48,10 @@ const stages = [
                 It should be able to fly and navigate by itself without any input or control from a human.
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                The drone will have at least one camera to allow it to "see" the world. I will integrate some vision capabilities so that it can "reason" about what it sees.
+                {`The drone will have at least one camera to allow it to "see" the world. I will integrate some vision capabilities so that it can "reason" about what it sees.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                The drone will also have GPS so that it can navigate from place to place.
+                {`The drone will also have GPS so that it can navigate from place to place.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
                 Ideally, a person will be able to (optionally) control the drone using natural language (to specify a task) or through controller inputs.
@@ -77,7 +77,7 @@ const stages = [
                 The second reason is just as simple: I think it will be hard.
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                "Great work", as Paul Graham <Link href="https://paulgraham.com/greatwork.html" target="_blank" className="text-[#00E500] underline hover:underline-offset-4 hover:[text-shadow:_0_0_10px_rgb(0_229_0_/_70%),_0_0_20px_rgb(0_229_0_/_50%)]">defines it</Link>, happens at the intersection of these 2 things; interest and hard things.
+                {"\"Great work\""}, as Paul Graham <Link href="https://paulgraham.com/greatwork.html" target="_blank" className="text-[#00E500] underline hover:underline-offset-4 hover:[text-shadow:_0_0_10px_rgb(0_229_0_/_70%),_0_0_20px_rgb(0_229_0_/_50%)]">defines it</Link>, happens at the intersection of these 2 things; interest and hard things.
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
                 I am not saying that I think that autonomous drones will be revolutionary, or even at all important in the grand scheme of things.
@@ -106,10 +106,10 @@ const stages = [
                 {"When will the drone be done? When will i have \"solved\" the \"problem\"?"}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                The answer is I don't know.
+                {`The answer is I don't know.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                I have a lot of things to learn and explore before I'll be satisfied.
+                {`I have a lot of things to learn and explore before I'll be satisfied.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
                 At the very least, I imagine that I will have some functioning prototype (able to fly and move) that is fully designed and built by me by <span className="bg-[#00E500] text-black px-2 py-0.5 rounded font-bold shadow-[0_0_10px_rgb(0_229_0_/_100%)] transition-shadow duration-200">January 31st, 2025</span>.
@@ -141,13 +141,13 @@ const stages = [
                 Apart from a couple classes in high school, I have no formal education or training in engineering and physics.
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                But on some level, I've always been drawn to hardware.
+                {`But on some level, I've always been drawn to hardware.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                I'm a person who enjoys building things.
+                {`I'm a person who enjoys building things.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                And the thing I'm building now is an <span className="text-[#00E500] font-bold [text-shadow:_0_0_10px_rgb(0_229_0_/_70%),_0_0_20px_rgb(0_229_0_/_50%)]">autonomous drone</span>.
+                {`And the thing I'm building now is an`} <span className="text-[#00E500] font-bold [text-shadow:_0_0_10px_rgb(0_229_0_/_70%),_0_0_20px_rgb(0_229_0_/_50%)]">autonomous drone</span>.
             </p>
         </div>
     ),
@@ -164,7 +164,7 @@ const stages = [
     content: (
         <div className="w-fit flex flex-col items-center justify-left gap-1">
             <p className="text-sm md:text-xl max-w-2xl w-full">
-                As I've said, I have no formal training in engineering or physics.
+                {`As I've said, I have no formal training in engineering or physics.`}
             </p>
             <p className="text-sm md:text-xl max-w-2xl w-full">
                 So naturally, my first step is to learn.
