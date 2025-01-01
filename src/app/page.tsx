@@ -22,7 +22,7 @@ export default function Home() {
       {!response && (
         <>
           <div className="w-fit mb-8">
-            <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_1.5s_steps(25),blink_0.5s_step-end_infinite]">
+            <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_1.5s_steps(25),blink_1s_step-end_infinite]">
               Do you want a drone?
             </h1>
           </div>
@@ -36,14 +36,14 @@ export default function Home() {
         <>
           {response === "Yes." && (
             <div className="w-fit">
-              <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_0.7s_steps(10),blink_0.5s_step-end_infinite]">
+              <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_0.7s_steps(10),blink_1s_step-end_infinite]">
                 I got you!
               </h1>
             </div>
           )}
           {response === "YES!" && (
             <div className="w-fit">
-              <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_1.2s_steps(20),blink_0.5s_step-end_infinite]">
+              <h1 className="text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-4 border-green-500 pr-1 animate-[typing_1.2s_steps(20),blink_1s_step-end_infinite]">
                 {"Someone's excited :)"}
               </h1>
             </div>
