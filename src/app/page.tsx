@@ -52,7 +52,7 @@ export default function Home() {
               </h1>
             </div>
           )}
-          <Button className="mt-8 text-lg md:text-xl px-6 md:px-8" variant="hacker" size="hacker" onClick={() => window.open("whatsapp://send?phone=6139860904")}>
+          <Button className="mt-8 text-lg md:text-xl px-6 md:px-8" variant="hacker" size="hacker" onClick={() => window.open("https://wa.me/16139860904")}>
             Text me!
           </Button>
         </>
